@@ -1,0 +1,1 @@
+# thunar-custom-actions
