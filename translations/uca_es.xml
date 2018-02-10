@@ -2,10 +2,10 @@
 <actions>
 <action>
    <icon></icon>
-   <name>Выполнить команду ...</name>
+   <name>Ejecutar orden ...</name>
    <unique-id>1391443541044100-3</unique-id>
    <command>xfce4-appfinder --collapsed</command>
-   <description>Запуск программы</description>
+   <description>Iniciar un programa</description>
    <patterns>*</patterns>
    <directories/>
    <audio-files/>
@@ -16,20 +16,20 @@
 </action>
 <action>
    <icon>utilities-terminal</icon>
-   <name>Открыть терминал здесь</name>
+   <name>Abrir Consola aquí</name>
    <unique-id>1388590880939619-1</unique-id>
    <command>exo-open --working-directory %f --launch TerminalEmulator</command>
-   <description>Запуск эмулятора терминала здесь</description>
+   <description>Iniciar emulador de consola aquí</description>
    <patterns>*</patterns>
    <startup-notify/>
    <directories/>
 </action>
 <action>
    <icon></icon>
-   <name>Открыть папку от root</name>
+   <name>Abrir Thunar como administrador</name>
    <unique-id>1391443434179984-1</unique-id>
    <command>gksu thunar %f</command>
-   <description>Открытие папки с правами администратора</description>
+   <description>Abrir este carpeta con permisos del administrador</description>
    <patterns>*</patterns>
    <directories/>
    <audio-files/>
@@ -40,10 +40,10 @@
 </action>
 <action>
    <icon></icon>
-   <name>Передать права Root</name>
+   <name>Ajustar Root como Dueño</name>
    <unique-id>1388696949105908-1</unique-id>
    <command>gksu &quot;chown -R root:root %F&quot;</command>
-   <description>Изменение административных разрешений </description>
+   <description>Cambiar a permisos como Administrado</description>
    <patterns>*</patterns>
    <directories/>
    <audio-files/>
@@ -54,10 +54,10 @@
 </action>
 <action>
    <icon></icon>
-   <name>Передать права пользователю</name>
+   <name>Ajustar usuario como Dueño</name>
    <unique-id>1388702559256309-5</unique-id>
    <command>gksu &quot;chown -R $USER:$USER %F&quot;</command>
-   <description>Удаление ограничений использования</description>
+   <description>Remover restricciones de uso</description>
    <patterns>*</patterns>
    <directories/>
    <audio-files/>
@@ -68,30 +68,30 @@
 </action>
 <action>
    <icon></icon>
-   <name>Редактировать от Root</name>
+   <name>Editar como raiz/root</name>
    <unique-id>1389150009142611-4</unique-id>
    <command>gksu leafpad %f</command>
-   <description>Внесение изменений в текстовые файлы</description>
+   <description>Realizar ajustes administrativos a archivos de textos</description>
    <patterns>*</patterns>
    <other-files/>
    <text-files/>
 </action>
 <action>
    <icon></icon>
-   <name>Найти файлы здесь</name>
+   <name>Buscar archivos aquí</name>
    <unique-id>1391015829778456-1</unique-id>
    <command>catfish --path=%f</command>
-   <description>Поиск в текущей папке</description>
+   <description>Buscar en carpeta actual</description>
    <patterns>*</patterns>
    <directories/>
    <text-files/>
 </action>
 <action>
    <icon></icon>
-   <name>Создать символьную ссылку</name>
+   <name>Crear enlace simbólico</name>
    <unique-id>1394124450909421-1</unique-id>
    <command>ln -s %f &quot;%n (symlink)&quot;</command>
-   <description>Ссылка между двумя файлами или директориями</description>
+   <description>Enlace simbólico entre dos archivos o carpetas</description>
    <patterns>*</patterns>
    <startup-notify/>
    <directories/>
@@ -100,47 +100,47 @@
 </action>
 <action>
    <icon>folder-publicshare</icon>
-   <name>Сделать папку общей в вашей сети</name>
+   <name>Compartir una carpet en su red</name>
    <unique-id>1399025775400525-1</unique-id>
    <command>gksu system-config-samba %d</command>
-   <description>Настройка совместного использования файлов</description>
+   <description>Configurar la compartition de archivos</description>
    <patterns>*</patterns>
    <directories/>
 </action>
 <action>
    <icon></icon>
-   <name>Посчитать md5sum</name>
+   <name>Computar md5sum</name>
    <unique-id>1426501025005582-4</unique-id>
    <command>yad --info --title=&quot;Check md5sum for %n&quot; --text=&quot;$(md5sum %n)&quot; | yad --width=350 --height=250 --progress --percentage=&quot;50&quot; --auto-kill --auto-close --title=&quot;Checksum utility&quot; --text=&quot;Calculating md5sum for %n&quot;</command>
-   <description>Показ контрольной суммы ISO</description>
+   <description>Mostrar valor del md5sum del ISO</description>
    <patterns>*.iso;*.ISO</patterns>
    <other-files/>
 </action>
 <action>
    <icon></icon>
-   <name>Проверка целостности данных</name>
+   <name>Verificar integridad de datos</name>
    <unique-id>1426501047462724-5</unique-id>
    <command>yad --info --title=&quot;Check md5 for %n&quot; --text=&quot;$(md5sum -c %f)&quot; | yad --progress --percentage=&quot;50&quot; --auto-kill --auto-close --title=&quot;Checksum utility&quot; --text=&quot;Checking md5sum for %n&quot;</command>
-   <description>Сравнение файлов ISO и md5sum</description>
+   <description>Comparar archivos de ISO y md5sum</description>
    <patterns>*.md5;*.md5sum</patterns>
    <other-files/>
    <text-files/>
 </action>
 <action>
 	<icon></icon>
-	<name>Создать звук при входе</name>
+	<name>Haga sonar el sonido de Inicio</name>
 	<unique-id>1447629663342880-3</unique-id>
 	<command>echo %f &gt;~/.config/startupsound.conf</command>
-	<description>Назначение выбранного звука для входа</description>
+	<description>Tocar el sonido de Inicio seleccionado</description>
 	<patterns>*</patterns>
 	<audio-files/>
 </action>
 <action>
 	<icon></icon>
-	<name>Создать звук при выходе</name>
+	<name>Haga sonar el sonido de Salir</name>
 	<unique-id>1447629663342880-4</unique-id>
 	<command>echo %f &gt;~/.config/logoutsound.conf</command>
-	<description>Назначение выбранного звука для выхода</description>
+	<description>Tocar el sonido de Salir seleccionado</description>
 	<patterns>*</patterns>
 	<audio-files/>
 </action>
